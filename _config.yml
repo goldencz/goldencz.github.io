@@ -13,3 +13,5 @@ plugins:
 - jekyll-seo-tag
 - jekyll-sitemap
 - jemoji
+exclude:
+- README.md
