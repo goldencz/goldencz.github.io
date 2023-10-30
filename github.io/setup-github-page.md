@@ -30,8 +30,8 @@ uninstall
 ### Install required ruby version
 Install and active Ruby.
 ```shell
-rbenv install 3.0.0
-rbenv global 3.0.0
+rbenv install 3.2.2 # Latest version
+rbenv global 3.2.2
 ruby --version
 # Similar information should be displayed.
 # ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-linux]
