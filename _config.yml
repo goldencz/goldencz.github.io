@@ -30,7 +30,7 @@ github_username:  goldencz
 github: [metadata]
 
 # Build settings
-remote_theme: pages-themes/midnight@v0.2.0
+remote_theme: kitian616/jekyll-TeXt-theme
 plugins:
   - jekyll-remote-theme
   - jekyll-gist
