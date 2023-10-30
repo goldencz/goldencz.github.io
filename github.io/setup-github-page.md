@@ -70,12 +70,6 @@ A Gemfile as well as other files should be created. Open and edit the Gemfile. T
 # gem "jekyll", "~> 4.3.2"
 # add below line to enable github page, you can change 228 to any supported github page version, check https://pages.github.com/versions/
 gem "github-pages", "~> 228",  group: :jekyll_plugins
-...
-group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-remote-theme" # Add jekyll plugin here.
-end
-
 ```
 Save and close.
 
@@ -89,9 +83,3 @@ It's better to test your site locally before submit it to github to improve effi
 bundle exec jekyll serve
 ```
 And then visit it on http://localhost:4000
-
-
-
-
-
-
