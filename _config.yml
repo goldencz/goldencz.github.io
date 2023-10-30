@@ -30,7 +30,7 @@ github_username:  goldencz
 github: [metadata]
 
 # Build settings
-remote_theme: kitian616/jekyll-TeXt-theme
+theme: minima
 plugins:
   - jekyll-remote-theme
   - jekyll-gist
