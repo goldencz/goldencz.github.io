@@ -56,5 +56,36 @@ Done.
 
 
 # Intialize a github repo with Jekyll
-[Github Guide](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll)
+[Github Guide](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll).
+## Intialize a jekyll site
+```shell
+cd /path/to/where/your/site/is/pubshed/
+jekyll new --skip-bundle .  # create a jekyll site in current directory
+```
+A Gemfile as well as other files should be created. Open and edit the Gemfile. Two key changes needs to made to satisfy github.
+```shell
+# Gemfile
+...
+# comment below line to disable default jekyll theme.
+# gem "jekyll", "~> 4.3.2"
+# add below line to enable github page, you can change 228 to any supported github page version, check https://pages.github.com/versions/
+gem "github-pages", "~> 228",  group: :jekyll_plugins
+```
+Save and close.
+
+```shell
+bundle install
+```
+
+## Test your site locally
+It's better to test your site locally before submit it to github to improve efficiency, it takes quite a while before your github *push* taking effect.
+```shell
+bundle exec jekyll serve
+```
+And then visit it on http://localhost:4000
+
+
+
+
+
 
