@@ -1,21 +1,17 @@
 ---
+layout: archive
 permalink: /categories/
-title: Categories
+title: "Posts by Category"
+author_profile: true
 ---
-<div id="archives">
-  {% for category in site.categories %}
-    <div class="archive-group">
-      {% capture category_name %}{{ category | first }}{% endcapture %}
-      <div id="#{{ category_name | slugize }}"></div>
-      <h3 class="category-head">{{ category_name }}</h3>
-      <a name="{{ category_name | slugize }}"></a>
-      {% for post in site.categories[category_name] %}
-      <article class="archive-item">
-        <h4>
-            <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
-        </h4>
-      </article>
-      {% endfor %}
-    </div>
+
+
+{% include group-by-array collection=site.posts field="categories" %}
+
+{% for category in group_names %}
+  {% assign posts = group_items[forloop.index0] %}
+  <h2 id="{{ category | slugify }}" class="archive__subtitle">{{ category }}</h2>
+  {% for post in posts %}
+    {% include archive-single.html %}
   {% endfor %}
-</div>
+{% endfor %}
