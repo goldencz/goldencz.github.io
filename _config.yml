@@ -156,6 +156,7 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _docs
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -276,6 +277,10 @@ compress_html:
   ignore:
     envs: development
 
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -284,10 +289,22 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: "single"
       author_profile: true
       read_time: true
       comments: true
       share: true
       related: true
       show_date: true
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: "single"
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "docs"

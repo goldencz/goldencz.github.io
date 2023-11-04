@@ -9,3 +9,13 @@ main:
     url: /page-archive/
   - title: "Collections"
     url: /collection-archive/
+  - title: "Docs"
+    url: /docs/
+
+docs:
+  - title: "cmake2bazel"
+    children:
+      - title: "Archtecture"
+        url: /docs/cmake2bazel-arch/
+      - title: "Tree-Sitter"
+        url: /docs/tree-sitter/
